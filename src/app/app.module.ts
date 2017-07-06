@@ -5,11 +5,16 @@ import { AngularMaterialModule } from '../ngmaterial.module';
 import { AppRoutingModule }     from './app-routing.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { PizzaComponent } from './pizza.component';
+import { SidebarComponent} from './sidebar.component';
+// import { DropdownComponent } from './dropdown.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    PizzaComponent
+    PizzaComponent,
+    SidebarComponent
+    // DropdownComponent
   ],
   imports: [
     BrowserModule,

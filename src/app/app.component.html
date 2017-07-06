@@ -1,25 +1,18 @@
-<div style="position:absolute;top:0;left:0;right:0;bottom:0;">
-  <md-sidenav-container #sidenav style="height:100%;width:100%;">
-    <md-sidenav mode="side" #sidenav style="min-width:220px;">
-      <md-select placeholder="Favorite food" (change)="change($event); sidenav.close()" floatPlaceholder="never">
-        <md-option *ngFor="let food of foods" [value]="food.value">
-          {{ food.viewValue }}
-        </md-option>
-      </md-select>
-    </md-sidenav>
-    <md-toolbar color="primary" style="min-height:64px;">
-      <span>
-        <button class="hamburger mat-button" md-button="" title="Docs menu" (click)="sidenav.toggle()"><span class="mat-button-wrapper">
-    <md-icon class="mat-icon sidenav-open" role="img" svgicon="menu" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></md-icon>
-  </span><div class="mat-button-ripple mat-ripple" md-ripple=""></div><div class="mat-button-focus-overlay"></div></button>
+<div class= "container">
+  <md-toolbar color="primary" style="min-height:64px;">
+    <span>
+      <button class="hamburger mat-button" md-button="" title="Docs menu" (click)="toggleSidenav()"><span class="mat-button-wrapper">
+      <md-icon class="mat-icon sidenav-open" role="img" svgicon="menu" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></md-icon>
+    </span>
+    <div class="mat-button-ripple mat-ripple" md-ripple=""></div><div class="mat-button-focus-overlay"></div></button>
       </span>
     <span>Fixed Header Example</span>
     </md-toolbar>
+    <sidebar></sidebar>
     <div class="inner-sidenav-content">
       <div style="padding-top:2em;padding-bottom:2em;">
         <pizza></pizza>
         <!--<router-outlet></router-outlet>-->
       </div>
     </div>
-  </md-sidenav-container>
 </div>
